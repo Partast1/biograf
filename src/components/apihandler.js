@@ -1,10 +1,15 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
-import Seat from "./seat";
+// import Seat from "./seat";
+
+
 
 export function Seatapi(props){
-    const listOfSeats = props.listOfSeats;
-    const  setListOfSeats = listOfSeats.map((stuff) =>
+    let [listOfSeats, setListOfSeats] = useState([]);
+
+
+     listOfSeats = props.listOfSeats;
+      setListOfSeats = listOfSeats.map((stuff) =>
         <li>{stuff}</li>
     );
     useEffect(() => {

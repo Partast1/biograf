@@ -1,7 +1,7 @@
 import Seat from '../components/seat';
 import {useEffect, useState, React, Component} from "react";
 import axios from "axios";
-// import {Seatapi} from './apihandler';
+import {Seatapi} from './apihandler';
 
 
 class Hall extends Component {
@@ -20,7 +20,7 @@ class Hall extends Component {
     render()
     {
 
-        Seatapi();
+        this.completeListOfSeats = Seatapi();
 
         // const items = this.state.listOfSeats.map(Seatapi.call(item){
         //     return <li>{item}</li>;
@@ -48,15 +48,7 @@ class Hall extends Component {
     }
 }
 
-function Seatapi(){
-    useEffect(() => {
-        axios.get("http://localhost:3001/seats").then((response) => {
-            this.completeListOfSeats(response.data);
-        });
-    }, []);
 
-
-}
 
 // function LockSeat(props){
 //     return  <button className="reserveSeat badge badge-primary"
