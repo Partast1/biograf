@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+// import App from './App';
+import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
+// import Movie from "./components/movie";
+// import Seat from "./components/seat";
+import Hall from "./components/hall";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Hall />
   </React.StrictMode>,
   document.getElementById('root')
 );

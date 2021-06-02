@@ -1,0 +1,36 @@
+.mainWrapper{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    background-color: aqua;
+    border: 1px solid #282c34;
+    float: left;
+
+}
+.Maintitle{
+    text-align: center;
+}
+.MainContentLeft{
+    width: 45%;
+    float: left;
+    margin-left: 4%;
+}
+.MainContentRight{
+    width: 45%;
+    float: left;
+    margin-left: 4%;
+}
+.Movie{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border: 1px solid lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
