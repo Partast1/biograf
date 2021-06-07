@@ -34,4 +34,13 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+db.seats = require('../models/seat.model')(sequelize, Sequelize);
+db.movies = require('../models/movie.model')(sequelize, Sequelize);
+db.halls = require('../models/hall.model')(sequelize, Sequelize);
+
+db.seats.belongsTo(db.halls);
+db.halls.hasMany(db.seats);
+db.movies.belongsTo(db.halls);
+db.halls.hasMany(db.movies);
+
 module.exports = db;

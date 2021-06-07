@@ -2,8 +2,8 @@ import axios from "axios";
 import {useEffect, useState, getState} from "react";
 import '../styles/seat.style.css';
 import React, {Component} from "react";
-const free = '#39D1B4';
-const occupied = '#FFD712';
+// const free = '#39D1B4';
+// const occupied = '';
 
 
 class Seat extends Component {
@@ -12,19 +12,22 @@ class Seat extends Component {
         this.state = { button:true,
             number: null,
             letter: null,
-            status: free
+            colorFree: "#39D1B4",
+            colorOccu: "#FFD712",
+            status: ""
         };
+        this.state.status = this.state.colorFree;
         this.toggleStatus = this.toggleStatus.bind(this);
     }
     toggleStatus() {
 
-        if(this.state.color === free){
-            this.setState({color:occupied})
+        if(this.state.status === this.state.colorFree){
+            this.setState({color:this.state.colorOccu})
         }
         else{
-            this.setState({color: free});
+            this.setState({color: this.state.colorFree});
         }
-        return this.state;
+        return this.state.color;
 
     }
 
@@ -33,16 +36,6 @@ class Seat extends Component {
     {
         return (
             <div>
-                <div className="seatable"
-                     style={{backgroundColor: this.state.status}}
-                     onClick={this.toggleStatus}>
-                    <span>
-                        {this.state.number} {this.state.letter}
-                    </span>
-                </div>
-
-
-
             </div>
         );
     }

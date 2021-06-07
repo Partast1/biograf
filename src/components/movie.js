@@ -18,9 +18,11 @@ import '../styles/movie.style.css';
                 return (
                     <div className="movie">
                         <div className="title"> {value.movieName} </div>
-                        <div className="badge-danger">Længde {value.runtime} mins </div>
+                        <div className="badge-success">Længde {value.runtime} mins </div>
                         <div className="body"> {value.movieDescription} </div>
                         <div className="footer"> Biografsal {value.hallFK} </div>
+                        {/*<button*/}
+                        {/*title="go to movie" onPress={() =>}></button>*/}
                     </div>
 
                 );

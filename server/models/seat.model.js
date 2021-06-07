@@ -1,21 +1,38 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, Sequelize) => {
     const Seats = sequelize.define("Seats", {
+        seat_id: {
+            type: Sequelize.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
         number: {
-            type: DataTypes.INTEGER,
+            type: Sequelize.INTEGER,
             allowNull: false
         },
         letter: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         },
         status: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         },
-        hallFK: {
-            type: DataTypes.INTEGER,
+        HallHallId: {
+            type: Sequelize.INTEGER,
             allowNull: false
         }
+        // ,
+        // hall_id_fk: {
+        //     type: DataTypes.INTEGER,
+        //
+        //     references: {
+        //         // This is a reference to another model
+        //         model: Halls,
+        //
+        //         // This is the column name of the referenced model
+        //         key: 'hall_id_fk'
+        //     }
+        // }
     });
     return Seats;
 };

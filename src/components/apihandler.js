@@ -4,27 +4,27 @@ import {useEffect, useState} from "react";
 
 
 
-export function Seatapi(props){
-    let [listOfSeats, setListOfSeats] = useState([]);
-
-
-     listOfSeats = props.listOfSeats;
-      setListOfSeats = listOfSeats.map((stuff) =>
-        <li>{stuff}</li>
-    );
-    useEffect(() => {
-        axios.get("http://localhost:3001/seats").then((response) => {
-            setListOfSeats(response.data);
-        });
-    }, []);
-    return(
-        <ul>{setListOfSeats}</ul>
-
-    );
-
-
-
-}
+// export function Seatapi(props){
+//     let [listOfSeats, setListOfSeats] = useState([]);
+//
+//
+//      listOfSeats = props.listOfSeats;
+//       setListOfSeats = listOfSeats.map((stuff) =>
+//         <li>{stuff}</li>
+//     );
+//     useEffect(() => {
+//         axios.get("http://localhost:3001/seats").then((response) => {
+//             setListOfSeats(response.data);
+//         });
+//     }, []);
+//     return(
+//         <ul>{setListOfSeats}</ul>
+//
+//     );
+//
+//
+//
+// }
 
 
 
