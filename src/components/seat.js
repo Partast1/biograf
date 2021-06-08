@@ -1,5 +1,3 @@
-import axios from "axios";
-import {useEffect, useState, getState} from "react";
 import '../styles/seat.style.css';
 import React, {Component} from "react";
 // const free = '#39D1B4';
@@ -10,26 +8,40 @@ class Seat extends Component {
     constructor(props) {
         super(props);
         this.state = { button:true,
-            number: null,
-            letter: null,
             colorFree: "#39D1B4",
             colorOccu: "#FFD712",
-            status: ""
+            status: "free"
         };
-        this.state.status = this.state.colorFree;
+        // this.status = this.colorFree  ;
         this.toggleStatus = this.toggleStatus.bind(this);
-    }
-    toggleStatus() {
 
-        if(this.state.status === this.state.colorFree){
-            this.setState({color:this.state.colorOccu})
-        }
-        else{
-            this.setState({color: this.state.colorFree});
-        }
-        return this.state.color;
 
     }
+    // toggleStatus() {
+    //
+    //
+    //     console.log("fuck off")
+    //     // if(this.state.status === "free"){
+    //     //     this.setState("occuipied")
+    //     // }
+    //     // else{
+    //     //     this.setState({color: this.state.colorFree});
+    //     // }
+    //     // return this.state.color;
+    //
+    // }
+    // toggleStatus() {
+    //
+    //     if(this.state.status === this.state.colorFree){
+    //         this.setState({color:this.state.colorOccu})
+    //     }
+    //     else{
+    //         this.setState({color: this.state.colorFree});
+    //     }
+    //     return this.state.color;
+    //
+    // }
+
 
 
     render()

@@ -18,18 +18,6 @@ module.exports = function testhej (sequelize, Sequelize)  {
             type: Sequelize.INTEGER,
             allowNull: false
         }
-        // ,
-        // hall_id_fk: {
-        //     type: Sequelize.INTEGER,
-        //
-        //     references: {
-        //         // This is a reference to another model
-        //         model: Halls,
-        //
-        //         // This is the column name of the referenced model
-        //         key: 'hall_id_fk'
-        //     }
-        // }
     });
 
     return Movies;

@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 // import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
-import Movie from "./components/movie";
+// import Movie from "./components/movie";
 // import Seat from "./components/seat";
-//  import Hall from "./components/hall";
+ import Hall from "./components/hall";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Movie />
+    <Hall />
   </React.StrictMode>,
   document.getElementById('root')
 );
