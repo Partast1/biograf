@@ -21,6 +21,7 @@
 .seat {
     width: 10%;
     height: 20%;
+    margin: 10%;
     /*border-radius: 10px;*/
     /*display: flex;*/
     /*flex-direction: column;*/

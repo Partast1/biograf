@@ -4,19 +4,20 @@ import React, {Component} from "react";
 // const occupied = '';
 
 
+
 class Seat extends Component {
     constructor(props) {
         super(props);
         this.state = { button:true,
-            colorFree: "#39D1B4",
-            colorOccu: "#FFD712",
-            status: "free"
+            free: "#39D1B4",
+            occupied: "#FFD712",
+            status: this.free
         };
-        // this.status = this.colorFree  ;
-        this.toggleStatus = this.toggleStatus.bind(this);
+        // this.toggleColor = this.toggleColor.bind(this);
 
 
     }
+
     // toggleStatus() {
     //
     //
@@ -52,6 +53,8 @@ class Seat extends Component {
         );
     }
 }
+
+
 
 // function LockSeat(props){
 //     return  <button className="reserveSeat badge badge-primary"
