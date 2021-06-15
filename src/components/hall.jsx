@@ -1,5 +1,5 @@
 import Seat from '../components/seat';
-import {useEffect, useState, Component} from "react";
+import React, {useEffect, useState, Component} from "react";
 import axios from "axios";
 import '../styles/seat.style.css';
 var free = '#39D1B4';
@@ -13,76 +13,45 @@ class Hall extends Component {
             isLoaded: false,
             seats: []
         };
-        this.toggleColor = this.toggleColor.bind(this);
-    }
-     toggleColor() {
-
-        if(this.state.color === free){
-            this.setState({color: occupied})
-        }
-        else{
-            this.setState({color: free});
-        }
-        return this.state;
-
+        // this.toggleColor = this.toggleColor.bind(this);
     }
 
 
-    componentDidMount() {
-        axios.get("http://localhost:3001/seats")
-            .then(res => {
-                const seats = res.data;
-                this.setState({ seats });
-            });
-    }
+
     // componentDidMount() {
-    //     fetch("http://localhost:3001/seats")
-    //         .then(res => res.json())
-    //         .then(
-    //             (Seat) => {
-    //                 this.setState({
-    //                     isLoaded: true,
-    //                     seats: Seat.seats
-    //                 });
-    //             },
-    //             // Note: it's important to handle errors here
-    //             // instead of a catch() block so that we don't swallow
-    //             // exceptions from actual bugs in components.
-    //             (error) => {
-    //                 this.setState({
-    //                     isLoaded: true,
-    //                     error
-    //                 });
-    //             }
-    //         )
+    //     axios.get("http://localhost:3001/seats")
+    //         .then(res => {
+    //             const seats = res.data;
+    //             this.setState({ seats });
+    //         });
     // }
 
-    render() {
-        // const { error, isLoaded, seats } = this.state;
-        // if (error) {
-        //     return <div>Error: {error.message}</div>;
-        // } else if (!isLoaded) {
-        //     return <div>Loading...</div>;
-        // } else {
-            return (
 
+    render() {
+            return (
 <div>
-                    {this.state.seats.map(Seat => (
+                    {/*{this.state.seats.map((Seat) => (*/}
                             <div className="seatContainer">
 
-                            <div className="seat"
-                             key={Seat.seat_id}
-                             style={{backgroundColor: this.state.color}}
-                             onClick={this.toggleColor}>
+                                <React.Fragment>
+                                    <Seat />
+                                </React.Fragment>
+                                {/*<div className="seat"*/}
+                                {/*     key={Seat.seat_id}*/}
+                                {/*     style={{backgroundColor: this.state.status}}*/}
+                                {/*     onClick={Seat.toggleColor()}>*/}
 
-                          Sæde {Seat.number} {Seat.letter}
-                         {Seat.status}  {Seat.HallHallId}
+                                {/*    Sæde {Seat.number} {Seat.letter}*/}
+                                {/*    {Seat.status}  {Seat.HallHallId}*/}
 
-                        </div>
+                                {/*</div>*/}
+
+
+
 
                             </div>
 
-                    ))}
+                    // ))}
 </div>
 
 
